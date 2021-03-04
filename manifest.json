@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "QuitMeet",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": ["https://meet.google.com/*"],
+            "css": ["style.css"],
+            "js": ["content.js"]
+        },
+        {
+            "matches": ["https://docs.google.com/forms/*"],
+            "css": ["style.css"],
+            "js": ["content copy.js"]
+        }
+    ]
+}
