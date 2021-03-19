@@ -1,4 +1,4 @@
-# Git Meet
+# Quit Meet
 Ferramenta que sai automaticamente de uma reunião do Google Meet.
 
 ## Descrição
