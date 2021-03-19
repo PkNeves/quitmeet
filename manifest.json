@@ -7,11 +7,6 @@
             "matches": ["https://meet.google.com/*"],
             "css": ["style.css"],
             "js": ["content.js"]
-        },
-        {
-            "matches": ["https://docs.google.com/forms/*"],
-            "css": ["style.css"],
-            "js": ["content copy.js"]
         }
     ]
 }

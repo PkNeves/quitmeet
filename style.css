@@ -1,17 +1,21 @@
 .elem {
-    margin: 5px;
-    width: 80px;
-    padding: 0;
-    border-radius: 3px;
-  }
+  margin: 5px;
+  width: 80px;
+  padding: 0;
+  border-radius: 3px;
+}
   
-  .active {
-    background-color: green;
-    color: white;
-  }
+.active {
+  background-color: green;
+  color: white;
+}
   
-  .inative {
-    color: gray;
-    background-color: white;
-    
-  }
+.inative {
+  color: gray;
+  background-color: white;
+  
+}
+
+.margin10 {
+  margin: 10px;
+}
