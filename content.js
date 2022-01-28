@@ -1,5 +1,9 @@
+var CONST_DIV_MANAGER = ".SGP0hd.kunNie"
+var CONST_USER_COUNT = ".uGOf1d"
+var CONST_END_CALL = "[jsname='CQylAd']"
+
 function endCall() {
-    let button = document.querySelector('[jsname="CQylAd"]')
+    let button = document.querySelector(CONST_END_CALL)
     button.click()
 }
 
@@ -22,7 +26,7 @@ function toggleButton() {
 
 
 function createElements() {
-    const div_manager = document.querySelector('.f0WtFf')
+    const div_manager = document.querySelector(CONST_DIV_MANAGER)
     let div = document.createElement('div')
     let button = document.createElement('button')
     let min_people = document.createElement('input')
@@ -49,9 +53,12 @@ function createElements() {
 
 
 function startVerify() {
-    let = n_people = document.querySelector('[jscontroller=FTBAv]')
+    let = n_people = document.querySelector(CONST_USER_COUNT)
     verify.observe(n_people, {
-        childList: true
+        childList: true,
+        attributes: true,
+        characterData: true,
+        subtree: true
     })
 }
 
@@ -63,7 +70,7 @@ function stopVerify() {
 let body = document.querySelector('body')
 
 let ready = new MutationObserver(() => {
-    let = n_people = document.querySelector('[jscontroller=FTBAv]')
+    let = n_people = document.querySelector(CONST_USER_COUNT)
     if (n_people) {
         createElements()
         ready.disconnect()
@@ -74,8 +81,8 @@ ready.observe(body, {
     childList: true
 })
 
-let verify = new MutationObserver(MutationRecord => {
-    let n_people = document.querySelector('[jscontroller=FTBAv]').innerHTML
+let verify = new MutationObserver(function() {
+    let n_people = document.querySelector(CONST_USER_COUNT).innerHTML
     let min_people = document.querySelector('[pk-n-people]').value
     if (parseInt(n_people) <= parseInt(min_people)) {
         endCall()
